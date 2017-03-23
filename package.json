@@ -1,0 +1,21 @@
+{
+  "name": "javascript-ajax-and-query",
+  "version": "1.0.0",
+  "description": "Simple simon says",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danangtamtomo/javascript-ajax-and-query.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danangtamtomo/javascript-ajax-and-query/issues"
+  },
+  "homepage": "https://github.com/danangtamtomo/javascript-ajax-and-query#readme"
+}
