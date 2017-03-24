@@ -11,18 +11,18 @@ function getRandomColor () {
 }
 
 app.use('/colors', (req, res) => {
-  const colors = [
-    {1: getRandomColor()},
-    {2: getRandomColor()},
-    {3: getRandomColor()},
-    {4: getRandomColor()},
-    {5: getRandomColor()},
-    {6: getRandomColor()},
-    {7: getRandomColor()},
-    {8: getRandomColor()},
-    {9: getRandomColor()}
-  ]
-  res.send(colors)
+  // const colors = [
+  //   {1: getRandomColor()},
+  //   {2: getRandomColor()},
+  //   {3: getRandomColor()},
+  //   {4: getRandomColor()},
+  //   {5: getRandomColor()},
+  //   {6: getRandomColor()},
+  //   {7: getRandomColor()},
+  //   {8: getRandomColor()},
+  //   {9: getRandomColor()}
+  // ]
+  res.send({ color: getRandomColor()})
 })
 
 app.listen(3000)

@@ -11,34 +11,57 @@
     .box {
       width: 300px;
       height: 300px;
-      background: #000;
+      border: 1px solid #000;
       margin: 2px;
       display: inline-block;
+    }
+
+    .wrapper {
+      width: 50%;
+      margin: auto;
+    }
+
+    .head {
+      text-align: center;
+      border: 1px solid #000;
+      margin-bottom: 50px;
+      padding: 50px;
     }
   </style>
 </head>
 
 <body>
-  <div class="head">
-    <h2>Simple Simon Says</h2>
-    <button type="button" id="clickMe" name="button">Click Me</button>
-  </div>
 
-  <div id="1" class="box"></div>
-  <div id="2" class="box"></div>
-  <div id="3" class="box"></div>
-  <br>
-  <div id="4" class="box"></div>
-  <div id="5" class="box"></div>
-  <div id="6" class="box"></div>
-  <br>
-  <div id="7" class="box"></div>
-  <div id="8" class="box"></div>
-  <div id="9" class="box"></div>
+  <div class="wrapper">
+    <div class="head">
+      <h2>Simple Simon Says</h2>
+      <button type="button" id="clickMe" name="button">Click Me</button>
+    </div>
+    <div id="1" class="box"></div>
+    <div id="2" class="box"></div>
+    <div id="3" class="box"></div>
+    <br>
+    <div id="4" class="box"></div>
+    <div id="5" class="box"></div>
+    <div id="6" class="box"></div>
+    <br>
+    <div id="7" class="box"></div>
+    <div id="8" class="box"></div>
+    <div id="9" class="box"></div>
+  </div>
 
 </body>
 <script type="text/javascript">
-  $.ajax()
+  $('#clickMe').on('click', function() {
+    $.ajax({
+      url: 'http://localhost:3000/colors',
+      success: function(result) {
+        console.log(result);
+        let theId = Math.floor(Math.random() * (9 - 0) + 1)
+        $(`#${theId}`).css('background-color', result[Object.keys(result)])
+      }
+    })
+  })
 </script>
 
 </html>
